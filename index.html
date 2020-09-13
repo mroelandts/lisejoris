@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="en">
 <style>
-body {
-  background-image: url('background-2.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: right bottom;
-  background-size: 50% 40%;
-}
+
 </style>
   <head>
     <!-- Required meta tags -->
@@ -20,50 +14,88 @@ body {
     <title>Hello, world!</title>
   </head>
   <body>
-
     <div class="container">
       <div class="row">
         <div class="col">
           <img src="test.png" class="img-fluid" alt="Responsive image">
         </div>
-        <div class="col-10">
-          2 of 3 (wider)
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          1 of 3
-        </div>
-        <div class="col-5">
-          2 of 3 (wider)
-        </div>
+          <div class="col-10 align-self-center">
+            <div class="my-4">
+            <a href="#firstModal" data-toggle="modal" data-target="#firstModal">
+              17.10.2019
+            </a>
+            </div>
+            <div class="my-4">
+            <a href="#secondModal" data-toggle="modal" data-target="#secondModal">
+              02.10.2020
+            </a>
+            </div>
+            <div class="my-4">
+            <a href="#thirdModal" data-toggle="modal" data-target="#thirdModal">
+              19.12.2020
+            </a>
+            </div>
+          </div>
       </div>
     </div>
 
     <div class="container">
     <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Click me!
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Don't click me bitch
+      <!-- Modal -->
+      <div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">First Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Don't click me bitch
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
+    <div class="container">
+    <!-- Button trigger modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="secondModalLongTitle">Second Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Don't click me bitch
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <!-- Button trigger modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="thirdModalLongTitle">Third Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Don't click me bitch
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
