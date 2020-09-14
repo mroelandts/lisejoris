@@ -17,7 +17,7 @@
     }
 
     .line-stuff {
-      height: 100%;
+      height: auto;
 
       /* The image used */
       background-image: url("test.png");
@@ -30,6 +30,18 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    
+    .top-container img{
+      height:100%;
+      width:auto !important;
+      position:absolute;
+      z-index:1;
+    }
+     .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 </style>
   <head>
     <!-- Required meta tags -->
@@ -44,7 +56,8 @@
   <body>
     <div class="container h-100">
       <div class="row h-100">
-        <div class="col-2 col-md-4 bg-primary line-stuff">
+        <div class="col-2 col-md-4 bg-primary top-container">
+          <img src="test.png" class="pull-right">
         </div>
         <div class="col-10 col-md-8 align-self-center">
 			<div class="row">
