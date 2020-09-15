@@ -1,46 +1,37 @@
 <!doctype html>
 <html lang="en">
 <style>
-    .title-txt {
-        margin-bottom: 10%;
-        margin-top: 10%;
-        margin-left: 3%;
+    body, html {
+      height: 100%;
+      margin: 0;
     }
 
     .title {
-        margin-bottom: 3%;
-        margin-top: 3%;
-        margin-left: 10%;
-        font-family: 'AlexanderLettering';
-        font-size: 70px;
+      margin-bottom: 3%;
+      margin-left: 10%;
+      font-family: 'AlexanderLettering';
+      font-size: 5em;
     }
 
-    .line-stuff {
-      height: auto;
+    .title-txt {
+      margin-bottom: 7%;
+      margin-top: 6%;
+      margin-left: 3%;
+      font-family: 'AlexanderLettering';
+      font-size: 4em;
+    }
 
-      /* The image used */
-      background-image: url("images/test.png");
-
-      /* Full height */
-      max-height: 100%;
-      min-height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
+    .text-modal {
+      font-family: 'AlexanderLettering';
+      font-size: 4em;
     }
 
     .top-container img{
       height:100%;
-      width:auto !important;
-      position:absolute;
-      z-index:1;
+      width: auto !important;
+      position: absolute;
+      z-index: -1;
     }
-     .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
 </style>
   <head>
     <!-- Required meta tags -->
@@ -49,44 +40,49 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- lisejoris CSS -->
     <link rel="stylesheet" href="lisejoris.css">
 
-    <title>Hello, world!</title>
+    <title>Lise &amp; Joris</title>
   </head>
   <body>
     <div class="container h-100">
       <div class="row h-100">
-        <div class="col-2 col-md-4 bg-primary top-container">
+        <div class="col-2 col-md-4 top-container text-center">
           <img src="images/test.png" class="pull-right float-right">
         </div>
         <div class="col-10 col-md-8 align-self-center">
-			<div class="row">
-				<div class="col-12 title">
-					Lise &amp; Joris
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 title-txt">
-					<a href="#firstModal" data-toggle="modal" data-target="#firstModal">
-					  17.10.2019
-					</a>
-				</div>
-            </div>
-            <div class="row">
-				<div class="col-12 title-txt">
-					<a href="#secondModal" data-toggle="modal" data-target="#secondModal">
-					  02.10.2020
-					</a>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-12 title-txt">
-                    <a href="#thirdModal" data-toggle="modal" data-target="#thirdModal">
-                      19.12.2020
-                    </a>
-                </div>
+          <div class="row">
+            <div class="col-12 title">
+              <b>Lise &amp; Joris</b>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12 title-txt">
+              <img src="images/icon1.png" alt="Ring" width="50" height="50">
+              <a href="#firstModal" data-toggle="modal" data-target="#firstModal">
+                17.10.2019
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 title-txt">
+              <img src="images/icon2.png" alt="Wedding" width="50" height="50">
+              <a href="#secondModal" data-toggle="modal" data-target="#secondModal">
+                02.10.2020
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 title-txt">
+              <img src="images/icon1.png" alt="Party" width="50" height="50">
+              <a href="#thirdModal" data-toggle="modal" data-target="#thirdModal">
+                19.12.2020
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -96,14 +92,16 @@
       <div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">First Modal title</h5>
+            <div class="modal-body text-center">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-              Don't click me bitch
+              <img src="images/icon1.png" alt="Ring" width="70" height="70">
+              <div class="text-modal">
+                <p>Vrijdag twee oktober. 12h</p>
+                <p>Stadhuis Schaarbeek</p>
+                <p>Colignonplein 1030 Schaarbeek</p>
+              </div>
             </div>
           </div>
         </div>
@@ -115,14 +113,11 @@
       <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="secondModalLongTitle">Second Modal title</h5>
+            <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-              Don't click me bitch
+              Don't click me bitch (2)
             </div>
           </div>
         </div>
@@ -134,14 +129,11 @@
       <div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="thirdModalLongTitle">Third Modal title</h5>
+            <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-              Don't click me bitch
+              Don't click me bitch (3)
             </div>
           </div>
         </div>
