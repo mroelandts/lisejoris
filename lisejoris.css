@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "AlexanderLettering";
+  src: url("./fonts/alexander-lettering.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/alexander-lettering.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/alexander-lettering.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/alexander-lettering.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/alexander-lettering.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/alexander-lettering.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/alexander-lettering.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
