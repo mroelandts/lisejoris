@@ -11,18 +11,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "LetterGothicStd";
+  src: url("./fonts/LetterGothicStd.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/LetterGothicStd.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/LetterGothicStd.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/LetterGothicStd.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/LetterGothicStd.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/LetterGothicStd.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/LetterGothicStd.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 a:link {
   color: black;
   background-color: transparent;
   text-decoration: none;
-}
-a:hover {
-  color: #0000EE;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
 }

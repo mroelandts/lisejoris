@@ -5,6 +5,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     .title {
@@ -14,7 +15,7 @@
       font-size: 5em;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 350px) {
       .title {
         margin-bottom: 3%;
         margin-left: 7%;
@@ -30,7 +31,7 @@
       font-size: 4em;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 350px) {
       .text-date {
         margin-bottom: 5%;
         margin-top: 4%;
@@ -40,8 +41,9 @@
     }
 
     .text-modal {
-      font-family: 'AlexanderLettering';
-      font-size: 4em;
+      margin-top: 5%;
+      font-family: 'LetterGothicStd';
+      font-size: 1em;
     }
 
     .top-container img{
@@ -57,10 +59,17 @@
        bottom: 0;
        width: 100%;
        text-align: right;
+       z-index: -2;
     }
 
     .footer img {
-      z-index: -2;
+      height: 300px;
+    }
+
+    @media (max-width: 400px) {
+      .footer img {
+        height: 200px;
+      }
     }
 </style>
   <head>
@@ -130,7 +139,7 @@
               <div class="text-modal">
                 <p>Vrijdag twee oktober. 12h</p>
                 <p>Stadhuis Schaarbeek</p>
-                <p>Colignonplein 1030 Schaarbeek</p>
+                <p>Colignonplein 1030&nbsp;Schaarbeek</p>
               </div>
             </div>
           </div>
@@ -181,7 +190,7 @@
     </div>
 
     <div class="footer">
-      <img src="images/cutout.png" height="100px">
+      <img src="images/cutout.png">
     </div>
 
     <!-- Optional JavaScript -->
