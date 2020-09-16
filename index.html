@@ -1,87 +1,93 @@
 <!DOCTYPE html>
-<html  >
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
-  <meta name="description" content="">
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-  <title>Wedding</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+.bgimg {
+  background-image: url('images/background5.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
-</head>
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
-  <section class="header8 cid-rXK0jGd20s mbr-fullscreen mbr-parallax-background" id="header8-0">
 
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
-            <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title align-center py-2 mbr-bold mbr-fonts-style display-1">
-                        TITLE BULLSHIT, write your stuff here
-                </h1>
-                <p class="mbr-text align-center py-2 mbr-fonts-style display-5">
-                        This will become some text about who why and when?
-                </p>
-                <div class="mbr-media show-modal align-center py-2" data-modal=".modalWindow">
-                         <span class="mbr-iconfont mbri-play" style="color: rgb(20, 157, 204); fill: rgb(20, 157, 204);"></span>
-                </div>
+<div class="bgimg">
+  <div class="topleft">
+    <img src="images/logo3.png" width="150" height="150">
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="countdown" style="font-size:30px">20d 0h 0m 0s</p>
+  </div>
+  <div class="bottomleft">
+    <p>Curious are you?</p>
+  </div>
+</div>
 
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="modalWindow" style="display: none;">
-            <div class="modalWindow-container">
-                <div class="modalWindow-video-container">
-                    <div class="modalWindow-video">
-                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" data-src="https://vimeo.com/349499781"></iframe>
-                    </div>
-                    <a class="close" role="button" data-dismiss="modal">
-                        <span aria-hidden="true" class="mbri-close mbr-iconfont closeModal"></span>
-                        <span class="sr-only">Close</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="countdown1 cid-rXK0rY3jPa" id="countdown1-1">
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 2, 2020 12:00:00").getTime();
 
-    <div class="container ">
-        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">
-            Countdown
-        </h2>
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
 
-    </div>
-    <div class="container countdown-cont align-center">
-        <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Days"></div>
-        <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Hours"></div>
-        <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="Minutes"></div>
-        <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="Seconds"></div>
-        <div class="countdown pt-5 mt-2" data-due-date="2020/12/17">
-        </div>
-    </div>
-</section>
+  // Get todays date and time
+  var now = new Date().getTime();
 
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/playervimeo/vimeo_player.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/countdown/jquery.countdown.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // Output the result in an element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 
 </body>
 </html>
