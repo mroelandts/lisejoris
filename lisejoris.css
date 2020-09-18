@@ -29,3 +29,7 @@ a:link {
   background-color: transparent;
   text-decoration: none;
 }
+
+a{
+  -webkit-tap-highlight-color: transparent;
+}
