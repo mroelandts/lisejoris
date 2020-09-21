@@ -35,10 +35,7 @@ a:link {
   color: #465c38;
   background-color: transparent;
   text-decoration: none;
-}
-
-a{
-  -webkit-tap-highlight-color: transparent;
+  outline: 0;
 }
 
 .title {
