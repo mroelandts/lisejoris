@@ -5,6 +5,7 @@ function ajaxpost () {
 
     // disable submit button to indicate sending
     document.getElementById('formGoGo').disabled = true;
+    document.getElementById('LoadingMessage').removeAttribute("hidden");
 
     // (B) AJAX REQUEST
     // (B1) POST DATA TO SERVER, RETURN RESPONSE AS TEXT
@@ -15,23 +16,23 @@ function ajaxpost () {
     .then((response) => {
         console.log(response);
         if (response == "OK") {
+            document.getElementById('LoadingMessage').setAttribute("hidden", "hidden");
             document.getElementById('JeejMessage').removeAttribute("hidden");
-            document.getElementById('formGoGo').disabled = true;
         }
         else if (response == "OK-sad") {
+            document.getElementById('LoadingMessage').setAttribute("hidden", "hidden");
             document.getElementById('SadMessage').removeAttribute("hidden");
-            document.getElementById('formGoGo').disabled = true;
         }
         else {
+            document.getElementById('LoadingMessage').setAttribute("hidden", "hidden");
             document.getElementById('FuckMessage').removeAttribute("hidden");
-            document.getElementById('formGoGo').disabled = true;
         }
     })
 
     // (B3) OPTIONAL - HANDLE FETCH ERROR
     .catch((err) => {
+        document.getElementById('LoadingMessage').setAttribute("hidden", "hidden");
         document.getElementById('FuckMessage').removeAttribute("hidden");
-        document.getElementById('formGoGo').disabled = true;
         console.error(err);
     });
 
