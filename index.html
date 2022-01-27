@@ -64,7 +64,7 @@
             <div class="col-12 text-date-low">
               <a href="#thirdModal" data-toggle="modal" data-target="#thirdModal">
                 <img src="images/filatuur3.png" alt="Party" height="70">
-                11.12.2021
+                19.02.2022
               </a>
             </div>
           </div>
@@ -132,9 +132,9 @@
               </button>
               <img src="images/filatuur3.png" alt="Party" height="100">
               <div class="text-modal">
-                <p>Aalst</p>
-                <hr>
-                <p id="countdown">100d 0h 0m 0s</p>
+                <p>11h30 - Huwelijksviering</p>
+                <p>Sint-Sulpitiuskerk</p>
+                <p>Grote Markt, Diest</p>
               </div>
             </div>
           </div>
@@ -153,33 +153,57 @@
               </button>
               <img src="images/filatuur3.png" alt="Party" height="100">
               <div class="text-modal">
-                <p>Aanwezigheid</p>
+                <p>Laat ons even weten of je erbij kan zijn</p>
               </div>
               <hr>
               <div class="row justify-content-center mt-4 text-modal">
-                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                  <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler"
-                        data-form-title="Form Name" onsubmit="myButton.disabled = true; return true;">
-                    <input type="hidden" name="email" data-form-email="true" value="MGIqBQHuV3dsrJGeQrsRv1uM4/prQoKi0HPutAOlmuLQQeAMEUPk+m/aY0eo1PiGuFe3NjVIpmPLFXTXMvf9oqknxzkZiRJloALDLLo8FB+cUlOPBRXWfXtvYArQn2sv">
-                    <div class="row">
-                      <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">
-                        Smeer die dansbenen al maar in &#127870;&#127870;&#127870;
+                <div class="col-lg-8 mx-auto mbr-form">
+                  <form method="POST" class="mbr-form form-with-styler" id="FormThingy"
+                        data-form-title="Form Name" onsubmit="return ajaxpost()">
+                    <div class="dragArea row">
+                      <div class="col-md col-sm-12 form-group mb-3">
+                      <div class="col-md col-sm-12 form-group mb-3">
+                          <input class="form-control" id="first_name" name="first_name" required="" size="32"
+                                 type="text" placeholder="Voornaam" value="">
                       </div>
-                      <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        Oops...! er is iets mis gelopen!
+                      <div class="col-md col-sm-12 form-group mb-3">
+                          <input class="form-control" id="last_name" name="last_name" required="" size="32"
+                                 type="text" placeholder="Naam" value="">
+                      </div>
+                      <div class="col-md col-sm-12 form-group mb-3">
+                          <input class="form-control" id="email" name="email" required="" size="32"
+                                 type="email" placeholder="Email" value="">
+                      </div>
+                      <div class="col-md col-sm-12 form-group mb-3">
+                          <p>
+                              <label class="align-left" for="option">Feest je mee met ons:</label>
+                          </p>
+                          <input type="radio" id="option-0" name="option" value="value_one" required>
+                          <label for="option-0">Ja</label><br>
+                          <input type="radio" id="option-1" name="option" value="value_two" required>
+                          <label for="option-1">Nee</label><br>
+                      </div>
+                      <div class="area col-md col-sm-12 form-group mb-3">
+                          <textarea class="form-control" name="details" rows="3"
+                                    placeholder="extra info" id="details"></textarea>
+                      </div>
+                      <br/>
+                      <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12" id="JeejMessage">
+                          Smeer die dansbenen al maar in &#127870;&#127870;&#127870;
+                        </div>
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12" id="SadMessage">
+                          Spijtig dat je niet komt, maar bedankt om het te laten weten!
+                        </div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12" id="FuckMessage">
+                          Oops...! er is iets mis gelopen!
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 align-center">
+                          <button class="btn btn-maki" type="submit" name="submitButton" id="formGoGo" [disabled]="disable">Laat het ons weten!</button>
                       </div>
                     </div>
-                      <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Na(a)m(en)" data-form-field="name" class="form-control" value="" id="name-form5-2" required>
-                        </div>
-                        <div class="col-12 form-group mb-3" data-for="textarea">
-                            <textarea name="textarea" placeholder="Laat ons even weten of jullie deze dag met ons kunnen mee vieren!" data-form-field="textarea" class="form-control" id="textarea-form5-2" required rows="3"></textarea>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center">
-                            <button type="submit" class="btn btn-maki" name="myButton">Laat het ons weten!</button>
-                        </div>
-                      </div>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -200,36 +224,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <!-- LiseJoris JavaScript -->
-    <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("Dec 11, 2021 18:00:00").getTime();
-
-      // Update the count down every 1 second
-      var countdownfunction = setInterval(function() {
-
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="countdown"
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(countdownfunction);
-          document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-    </script>
-    <script src="assets/formoid/formoid.min.js"></script>
+    <script src="assets/mroelandts/ajax_post.js"></script>
   </body>
 </html>
